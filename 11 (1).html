@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Анталья Кебаб — Красная Поляна | Гриль-бистро на Волоколамской, 11</title>
+  <meta name="description" content="Настоящий турецкий мангал в сердце Красной Поляны. Искандер-кебаб, фирменная шаурма на углях и предзаказ напрямую на кухню в WhatsApp без комиссий агрегаторов." />
+
+  <!-- Google Fonts: Cormorant Garamond, Manrope, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            basalt: '#0D0C0B',
+            stoneDark: '#161412',
+            elevated: '#1E1B18',
+            copper: '#C8824B',
+            gold: '#E3A875',
+            ivory: '#F5F0EA',
+            taupe: '#A0978E',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Manrope"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+          },
+          boxShadow: {
+            'copper-glow': '0 12px 40px -10px rgba(200, 130, 75, 0.35)',
+            'card-deep': '0 24px 60px -20px rgba(0, 0, 0, 0.75)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Custom dark scrollbar & fine visual treatments */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0D0C0B;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2A2521;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C8824B;
+    }
+
+    body {
+      background-color: #0D0C0B;
+      color: #F5F0EA;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Subtle Ken Burns slow zoom on Hero mountain photograph */
+    @keyframes kenBurns {
+      0% {
+        transform: scale(1.02) translate3d(0, 0, 0);
+      }
+      50% {
+        transform: scale(1.1) translate3d(-1.2%, -0.8%, 0);
+      }
+      100% {
+        transform: scale(1.02) translate3d(0, 0, 0);
+      }
+    }
+    .animate-ken-burns {
+      animation: kenBurns 32s ease-in-out infinite;
+    }
+
+    /* Scroll reveal animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hide native scrollbar on horizontal pill strips */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Custom time input icon color for dark theme */
+    input[type="time"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.85) sepia(0.3) saturate(2) hue-rotate(340deg);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="font-sans bg-basalt text-ivory selection:bg-copper/30 selection:text-ivory overflow-x-hidden">
+
+  <!-- Subtle Film-Grain Texture Overlay (Inline SVG Filter, No Base64) -->
+  <svg class="fixed inset-0 w-full h-full pointer-events-none z-[90] opacity-[0.038]" aria-hidden="true">
+    <filter id="filmGrainFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#filmGrainFilter)" />
+  </svg>
+
+  <!-- ===================================================================== -->
+  <!-- 1. STICKY FROSTED-GLASS HEADER                                        -->
+  <!-- ===================================================================== -->
+  <header id="site-header" class="sticky top-0 z-40 bg-basalt/80 backdrop-blur-xl border-b border-ivory/[0.09] transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-[76px] gap-3">
+        <!-- Brand Monogram + Title -->
+        <a href="#top" class="flex items-center gap-3.5 group shrink-0">
+          <div class="relative w-11 h-11 rounded-xl border border-copper/45 bg-gradient-to-br from-copper/20 via-elevated to-basalt flex items-center justify-center shadow-inner transition-all duration-300 group-hover:border-gold/80 group-hover:shadow-copper-glow">
+            <span class="font-serif text-xl font-bold tracking-tight text-gold leading-none">AK</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-xl sm:text-2xl font-semibold tracking-tight text-ivory leading-none group-hover:text-gold transition-colors">
+              Анталья Кебаб
+            </span>
+            <span class="text-[11px] sm:text-xs text-taupe mt-1 tracking-wide hidden xs:block sm:block">
+              Красная Поляна · Волоколамская, 11
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7" aria-label="Основная навигация">
+          <a href="#menu" class="text-sm font-medium text-taupe hover:text-ivory transition-colors">Меню</a>
+          <a href="#combo" class="text-sm font-medium text-taupe hover:text-ivory transition-colors">Комбо</a>
+          <a href="#about" class="text-sm font-medium text-taupe hover:text-ivory transition-colors">О кухне</a>
+          <a href="#reviews" class="text-sm font-medium text-taupe hover:text-ivory transition-colors">Отзывы</a>
+          <a href="#contacts" class="text-sm font-medium text-taupe hover:text-ivory transition-colors">Контакты</a>
+        </nav>
+
+        <!-- Live Moscow Status + Interactive Cart Button -->
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <!-- Live UTC+3 Open/Closed Pill -->
+          <div id="live-status-pill" class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-stoneDark border border-ivory/[0.09] text-xs font-mono text-taupe" title="Время работы по Москве (UTC+3)">
+            <span id="live-status-dot" class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span id="live-status-text">Открыто · до 23:00</span>
+          </div>
+
+          <!-- Cart Trigger -->
+          <button
+            type="button"
+            onclick="openCartDrawer()"
+            class="inline-flex items-center gap-2.5 px-3.5 sm:px-4 py-2.5 rounded-xl bg-elevated hover:bg-elevated/90 border border-copper/45 hover:border-gold text-sm font-semibold text-ivory transition-all duration-200 shadow-sm active:scale-[0.98] min-h-[44px]"
+            aria-label="Открыть корзину заказа"
+          >
+            <svg class="w-4 h-4 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span class="hidden sm:inline">Заказ</span>
+            <span id="header-cart-count" class="px-2 py-0.5 rounded-md bg-copper text-basalt font-mono text-xs font-bold leading-tight">0</span>
+            <span id="header-cart-total" class="font-mono text-xs text-gold hidden sm:inline">0 ₽</span>
+          </button>
+
+          <!-- Mobile Navigation Toggle -->
+          <button
+            type="button"
+            onclick="toggleMobileMenu()"
+            class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl bg-stoneDark border border-ivory/[0.09] text-ivory hover:border-copper/50 transition-colors"
+            aria-label="Меню навигации"
+          >
+            <svg id="mobile-menu-icon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Nav -->
+      <div id="mobile-nav" class="hidden lg:hidden pb-4 pt-2 border-t border-ivory/[0.08]">
+        <div class="flex flex-col gap-1">
+          <a href="#menu" onclick="toggleMobileMenu(false)" class="px-3 py-2.5 rounded-lg text-sm font-medium text-ivory/90 hover:bg-elevated">Меню кухни</a>
+          <a href="#combo" onclick="toggleMobileMenu(false)" class="px-3 py-2.5 rounded-lg text-sm font-medium text-ivory/90 hover:bg-elevated">Сет «Вечер в Поляне»</a>
+          <a href="#about" onclick="toggleMobileMenu(false)" class="px-3 py-2.5 rounded-lg text-sm font-medium text-ivory/90 hover:bg-elevated">О кухне и углях</a>
+          <a href="#reviews" onclick="toggleMobileMenu(false)" class="px-3 py-2.5 rounded-lg text-sm font-medium text-ivory/90 hover:bg-elevated">Отзывы гостей</a>
+          <a href="#contacts" onclick="toggleMobileMenu(false)" class="px-3 py-2.5 rounded-lg text-sm font-medium text-ivory/90 hover:bg-elevated">Адрес и контакты</a>
+          <div class="mt-2 px-3 py-2 rounded-lg bg-stoneDark border border-ivory/[0.08] flex items-center justify-between text-xs font-mono text-taupe">
+            <span class="flex items-center gap-2">
+              <span id="mobile-status-dot" class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span id="mobile-status-text">Открыто · 10:00–23:00 МСК</span>
+            </span>
+            <a href="tel:+79884124400" class="text-gold">+7 (988) 412-44-00</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- =================================================================== -->
+    <!-- 2. CINEMATIC FULL-BLEED HERO SECTION                                -->
+    <!-- =================================================================== -->
+    <section class="relative overflow-hidden border-b border-ivory/[0.09] min-h-[640px] lg:min-h-[720px] flex items-center">
+      <!-- Dusk Alpine Mountain Photo with Slow Ken Burns -->
+      <div class="absolute inset-0 z-0 overflow-hidden bg-stoneDark">
+        <img
+          src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2000&q=85"
+          alt="Вечерние вершины гор Красной Поляны"
+          class="w-full h-full object-cover object-center animate-ken-burns opacity-55"
+          onerror="this.src='https://placehold.co/1920x1080/161412/C8824B?text=Krasnaya+Polyana+Mountains'"
+        />
+        <!-- Multi-layer Dark Gradient Vignette for Razor-Sharp Legibility -->
+        <div class="absolute inset-0 bg-gradient-to-r from-basalt via-basalt/80 to-basalt/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-basalt via-basalt/35 to-basalt/65"></div>
+        <div class="absolute inset-0" style="background: radial-gradient(circle at 72% 38%, rgba(200, 130, 75, 0.16), transparent 58%);"></div>
+      </div>
+
+      <!-- Subtle Charcoal Embers Canvas -->
+      <canvas id="embers-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-[1] opacity-75"></canvas>
+
+      <!-- Subtle Toggle for Ember Animation -->
+      <button
+        type="button"
+        id="embers-toggle"
+        onclick="toggleEmbers()"
+        class="hidden sm:inline-flex items-center gap-2 absolute bottom-5 right-6 z-20 px-3 py-1.5 rounded-full bg-basalt/65 backdrop-blur-md border border-ivory/[0.1] text-[11px] font-mono text-taupe hover:text-ivory hover:border-copper/50 transition-colors"
+        title="Включить или выключить анимацию искр мангала"
+      >
+        <span id="embers-dot" class="w-1.5 h-1.5 rounded-full bg-copper"></span>
+        <span id="embers-label">Искры углей: вкл</span>
+      </button>
+
+      <!-- Hero Content Grid -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <!-- Left Editorial Column -->
+          <div class="lg:col-span-7">
+            <!-- Eyebrow Pill -->
+            <div class="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-stoneDark/85 backdrop-blur-md border border-ivory/[0.12] mb-6 sm:mb-7">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+              </span>
+              <span class="font-mono text-[11px] sm:text-xs text-ivory/85 tracking-wide">
+                43.6799° N, 40.2055° E · Красная Поляна · 10:00 – 23:00
+              </span>
+            </div>
+
+            <!-- Cormorant Garamond Display H1 -->
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-[66px] font-semibold tracking-tight leading-[1.04] text-ivory mb-6">
+              Настоящий турецкий мангал
+              <span class="block italic text-gold font-medium mt-1">в сердце Красной Поляны</span>
+            </h1>
+
+            <!-- Appetizing Subtitle -->
+            <p class="text-base sm:text-lg text-ivory/80 max-w-xl leading-relaxed mb-8">
+              Сочный Искандер-кебаб, фирменная шаурма с дымком живых углей и румяная выпечка с видом на Кавказский хребет. Оформляйте предзаказ напрямую на кухню в WhatsApp — без очередей и комиссий агрегаторов.
+            </p>
+
+            <!-- Dual CTAs -->
+            <div class="flex flex-wrap items-center gap-3.5 mb-10 sm:mb-12">
+              <a
+                href="#menu"
+                class="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-xl bg-gradient-to-r from-copper to-gold text-basalt font-bold text-sm sm:text-[15px] shadow-copper-glow hover:brightness-110 transition-all duration-200 active:scale-[0.98] min-h-[48px]"
+              >
+                <span>Перейти к меню</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </a>
+              <a
+                href="tel:+79884124400"
+                class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-stoneDark/75 backdrop-blur-md border border-ivory/[0.16] hover:border-copper/70 text-ivory font-mono text-sm font-medium transition-all duration-200 min-h-[48px]"
+              >
+                <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>+7 (988) 412-44-00</span>
+              </a>
+            </div>
+
+            <!-- 3-Column Metrics Bar -->
+            <div class="grid grid-cols-3 gap-4 sm:gap-8 pt-7 border-t border-ivory/[0.11] max-w-xl">
+              <div>
+                <div class="font-mono text-xl sm:text-2xl font-semibold text-ivory flex items-center gap-1">
+                  <span>4.9</span><span class="text-gold text-lg">★</span>
+                </div>
+                <div class="text-xs text-taupe mt-1">Яндекс Карты</div>
+              </div>
+              <div>
+                <div class="font-mono text-xl sm:text-2xl font-semibold text-ivory">15–20 мин</div>
+                <div class="text-xs text-taupe mt-1">Готовность заказа</div>
+              </div>
+              <div>
+                <div class="font-mono text-xl sm:text-2xl font-semibold text-gold">0 ₽</div>
+                <div class="text-xs text-taupe mt-1">Чай и лепёшка каждому гостю</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Frosted-Glass Hospitality Card -->
+          <div class="lg:col-span-5">
+            <div class="relative rounded-2xl bg-stoneDark/75 backdrop-blur-2xl border border-copper/40 p-6 sm:p-8 shadow-card-deep overflow-hidden">
+              <!-- Delicate top gold highlight hairline -->
+              <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent"></div>
+
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-gold">Комплимент от шефа</span>
+                <span class="px-2.5 py-1 rounded-full bg-copper/15 border border-copper/35 font-mono text-[11px] text-gold">К каждому заказу</span>
+              </div>
+
+              <h2 class="font-serif text-3xl sm:text-[34px] font-semibold tracking-tight text-ivory leading-tight mb-3">
+                Традиция гостеприимства
+              </h2>
+
+              <p class="text-sm text-taupe leading-relaxed mb-6">
+                Пока мясо пропитывается ароматом живых берёзовых углей, мы встречаем каждого гостя так, как принято на южном побережье Турции — с теплом и щедрым угощением.
+              </p>
+
+              <ul class="divide-y divide-ivory/[0.08] border-t border-ivory/[0.08]">
+                <li class="py-3.5 flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>
+                    <span class="text-sm text-ivory/95">Турецкий чёрный чай в тюльпанах</span>
+                  </div>
+                  <span class="font-mono text-xs font-medium text-gold shrink-0">В подарок</span>
+                </li>
+                <li class="py-3.5 flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>
+                    <span class="text-sm text-ivory/95">Горячая лепёшка из печи</span>
+                  </div>
+                  <span class="font-mono text-xs font-medium text-gold shrink-0">В подарок</span>
+                </li>
+                <li class="py-3.5 flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>
+                    <span class="text-sm text-ivory/95">Термоупаковка с собой в апартаменты</span>
+                  </div>
+                  <span class="font-mono text-xs font-medium text-gold shrink-0">Бесплатно</span>
+                </li>
+              </ul>
+
+              <div class="mt-5 pt-4 border-t border-ivory/[0.08] flex items-center justify-between text-xs text-taupe">
+                <span>Волоколамская, 11 · Веранда с видом</span>
+                <a href="#combo" class="text-gold hover:text-ivory font-medium transition-colors">Смотреть комбо →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 3. ARCHITECTURAL BENTO HIGHLIGHTS STRIP («Почему выбирают нас»)     -->
+    <!-- =================================================================== -->
+    <section id="about" class="py-16 sm:py-20 border-b border-ivory/[0.09] bg-basalt">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 reveal">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-[0.18em] text-copper">Философия кухни</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-semibold tracking-tight text-ivory mt-2">
+              Почему выбирают нас
+            </h2>
+          </div>
+          <p class="text-sm sm:text-base text-taupe max-w-md">
+            Никаких полуфабрикатов и скрытых наценок — только честный огонь, свежие продукты и уважение к каждому гостю Поляны.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <!-- Bento Card 1 -->
+          <article class="reveal group rounded-2xl bg-stoneDark border border-ivory/[0.09] hover:border-copper/45 p-7 transition-all duration-300 hover:-translate-y-1">
+            <div class="w-12 h-12 rounded-xl bg-elevated border border-copper/30 flex items-center justify-center text-gold mb-6 group-hover:bg-copper/15 transition-colors">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c.5 3-1.5 4.5-1.5 7 0 1.4 1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0-.9-.4-1.8-1-2.5 2.5 1.4 4 4 4 7a6.5 6.5 0 11-13 0c0-3.8 2.6-6.9 6.5-11.5z" />
+              </svg>
+            </div>
+            <div class="font-mono text-[11px] uppercase tracking-widest text-copper mb-2">01 · Мангал</div>
+            <h3 class="font-serif text-2xl font-semibold text-ivory mb-2.5">Живой огонь и маринад 24 часа</h3>
+            <p class="text-sm text-taupe leading-relaxed">
+              Мясо маринуется в турецких специях сутки и готовится на живых берёзовых и дубовых углях строго сразу после вашего заказа.
+            </p>
+          </article>
+
+          <!-- Bento Card 2 -->
+          <article class="reveal group rounded-2xl bg-stoneDark border border-ivory/[0.09] hover:border-copper/45 p-7 transition-all duration-300 hover:-translate-y-1" style="transition-delay: 80ms;">
+            <div class="w-12 h-12 rounded-xl bg-elevated border border-copper/30 flex items-center justify-center text-gold mb-6 group-hover:bg-copper/15 transition-colors">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 19l6-11 4 6 3-4 5 9H3z" />
+              </svg>
+            </div>
+            <div class="font-mono text-[11px] uppercase tracking-widest text-copper mb-2">02 · Атмосфера</div>
+            <h3 class="font-serif text-2xl font-semibold text-ivory mb-2.5">Панорама Кавказских гор</h3>
+            <p class="text-sm text-taupe leading-relaxed">
+              Уютная веранда на Волоколамской, 11 или горячий ужин в термоупаковке с собой в апартаменты и отели Роза Хутор и Эстосадка.
+            </p>
+          </article>
+
+          <!-- Bento Card 3 -->
+          <article class="reveal group rounded-2xl bg-stoneDark border border-ivory/[0.09] hover:border-copper/45 p-7 transition-all duration-300 hover:-translate-y-1" style="transition-delay: 160ms;">
+            <div class="w-12 h-12 rounded-xl bg-elevated border border-copper/30 flex items-center justify-center text-gold mb-6 group-hover:bg-copper/15 transition-colors">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
+            <div class="font-mono text-[11px] uppercase tracking-widest text-copper mb-2">03 · Прямой заказ</div>
+            <h3 class="font-serif text-2xl font-semibold text-ivory mb-2.5">0% комиссий агрегаторов</h3>
+            <p class="text-sm text-taupe leading-relaxed">
+              Честные цены меню без накруток сервисов доставки и мгновенная передача вашего предзаказа напрямую повару в WhatsApp.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 4. SIGNATURE INTERACTIVE MENU SECTION («Меню кухни»)                -->
+    <!-- =================================================================== -->
+    <section id="menu" class="py-16 sm:py-24 border-b border-ivory/[0.09] bg-gradient-to-b from-basalt via-stoneDark/40 to-basalt">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Menu Header + Search -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 reveal">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-[0.18em] text-copper">Свежее с мангала и из печи</span>
+            <h2 class="font-serif text-4xl sm:text-5xl font-semibold tracking-tight text-ivory mt-2">
+              Меню кухни
+            </h2>
+            <p class="text-sm sm:text-base text-taupe mt-2">
+              Нажмите на блюдо, чтобы выбрать остроту, соус и добавки, или добавляйте в заказ в один клик.
+            </p>
+          </div>
+
+          <!-- Search Input -->
+          <div class="relative w-full lg:w-72">
+            <svg class="w-4 h-4 text-taupe absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input
+              type="text"
+              id="menu-search"
+              oninput="handleSearch(this.value)"
+              placeholder="Поиск: шаурма, кебаб, айран..."
+              class="w-full pl-10 pr-9 py-2.5 rounded-xl bg-stoneDark border border-ivory/[0.11] text-sm text-ivory placeholder:text-taupe/70 focus:outline-none focus:border-copper transition-colors min-h-[44px]"
+            />
+            <button
+              type="button"
+              id="clear-search-btn"
+              onclick="clearSearch()"
+              class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-taupe hover:text-ivory p-1"
+              aria-label="Очистить поиск"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="flex items-center gap-2.5 overflow-x-auto no-scrollbar pb-3 mb-7 reveal" role="tablist" aria-label="Категории меню">
+          <button type="button" data-cat="all" onclick="setCategory('all', this)" class="cat-pill shrink-0 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 min-h-[44px] bg-copper text-basalt border border-copper">
+            Все блюда
+          </button>
+          <button type="button" data-cat="grill" onclick="setCategory('grill', this)" class="cat-pill shrink-0 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 min-h-[44px] bg-stoneDark text-taupe border border-ivory/[0.09] hover:border-copper/50 hover:text-ivory">
+            Мангал и кебабы
+          </button>
+          <button type="button" data-cat="shawarma" onclick="setCategory('shawarma', this)" class="cat-pill shrink-0 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 min-h-[44px] bg-stoneDark text-taupe border border-ivory/[0.09] hover:border-copper/50 hover:text-ivory">
+            Шаурма и выпечка
+          </button>
+          <button type="button" data-cat="sides" onclick="setCategory('sides', this)" class="cat-pill shrink-0 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 min-h-[44px] bg-stoneDark text-taupe border border-ivory/[0.09] hover:border-copper/50 hover:text-ivory">
+            Закуски и напитки
+          </button>
+        </div>
+
+        <!-- Dynamic Menu Cards Grid -->
+        <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+
+        <!-- Empty Search State -->
+        <div id="menu-empty" class="hidden text-center py-16 rounded-2xl bg-stoneDark border border-ivory/[0.08]">
+          <p class="font-serif text-2xl text-ivory mb-2">По вашему запросу блюд не найдено</p>
+          <p class="text-sm text-taupe mb-5">Попробуйте изменить запрос или сбросить фильтр категорий.</p>
+          <button type="button" onclick="resetMenuFilters()" class="px-5 py-2.5 rounded-xl bg-elevated border border-copper/50 text-sm font-semibold text-gold hover:bg-copper hover:text-basalt transition-colors">
+            Показать всё меню
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 5. EDITORIAL SPOTLIGHT COMBO BANNER («Сет «Вечер в Поляне»»)        -->
+    <!-- =================================================================== -->
+    <section id="combo" class="py-16 sm:py-20 border-b border-ivory/[0.09] bg-basalt">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal relative rounded-3xl bg-gradient-to-br from-elevated via-stoneDark to-basalt border border-copper/45 overflow-hidden shadow-card-deep">
+          <!-- Ambient bronze glow -->
+          <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-copper/15 blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-gold/10 blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch">
+            <!-- Left Editorial Copy -->
+            <div class="lg:col-span-7 p-7 sm:p-10 lg:p-12 flex flex-col justify-between">
+              <div>
+                <div class="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-copper/15 border border-copper/40 mb-5">
+                  <span class="font-mono text-[11px] uppercase tracking-[0.14em] text-gold font-semibold">Специальный бокс в апартаменты</span>
+                </div>
+
+                <h2 class="font-serif text-3xl sm:text-5xl font-semibold tracking-tight text-ivory leading-[1.08] mb-4">
+                  Сет <span class="italic text-gold">«Вечер в Поляне»</span> на двоих
+                </h2>
+
+                <p class="text-sm sm:text-base text-taupe leading-relaxed max-w-xl mb-6">
+                  Готовый сытный ужин с мангала после прогулок или катания в горах. Аккуратно упакуем в термобоксы, чтобы вы принесли блюда домой обжигающе горячими.
+                </p>
+
+                <!-- Included Items List -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8">
+                  <div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-basalt/60 border border-ivory/[0.07] text-sm text-ivory/95">
+                    <span class="text-gold font-mono text-xs">01</span>
+                    <span>Искандер-кебаб · 450 г</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-basalt/60 border border-ivory/[0.07] text-sm text-ivory/95">
+                    <span class="text-gold font-mono text-xs">02</span>
+                    <span>Фирменная шаурма · 420 г</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-basalt/60 border border-ivory/[0.07] text-sm text-ivory/95">
+                    <span class="text-gold font-mono text-xs">03</span>
+                    <span>Хачапури по-аджарски · 400 г</span>
+                  </div>
+                  <div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-basalt/60 border border-ivory/[0.07] text-sm text-ivory/95">
+                    <span class="text-gold font-mono text-xs">04</span>
+                    <span>2 домашних турецких айрана</span>
+                  </div>
+                  <div class="sm:col-span-2 flex items-center justify-between gap-2.5 px-3.5 py-2.5 rounded-xl bg-copper/10 border border-copper/35 text-sm text-gold">
+                    <span>+ Турецкий чёрный чай и горячая лепёшка из печи</span>
+                    <span class="font-mono text-xs font-semibold shrink-0">В подарок</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Price + CTA Row -->
+              <div class="flex flex-wrap items-center justify-between gap-5 pt-6 border-t border-ivory/[0.1]">
+                <div class="flex items-baseline gap-3.5">
+                  <span class="font-mono text-3xl sm:text-4xl font-bold text-ivory">1 590 ₽</span>
+                  <span class="font-mono text-base text-taupe line-through">1 790 ₽</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-400/30 font-mono text-xs font-semibold text-emerald-300">
+                    Экономия 200 ₽
+                  </span>
+                </div>
+
+                <button
+                  type="button"
+                  onclick="addComboToCart()"
+                  class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-copper to-gold text-basalt font-bold text-sm sm:text-[15px] shadow-copper-glow hover:brightness-110 transition-all duration-200 active:scale-[0.98] min-h-[48px]"
+                >
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                  </svg>
+                  <span>Добавить сет в заказ</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Culinary Visual Showcase -->
+            <div class="lg:col-span-5 relative min-h-[260px] lg:min-h-full bg-stoneDark border-t lg:border-t-0 lg:border-l border-ivory/[0.09]">
+              <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1100&q=85"
+                alt="Сет Вечер в Поляне с блюдами на мангале"
+                class="w-full h-full object-cover object-center brightness-90"
+                onerror="this.src='https://placehold.co/900x700/1E1B18/E3A875?text=Dinner+Combo+Box'"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-basalt/90 via-basalt/25 to-transparent lg:bg-gradient-to-r lg:from-stoneDark/85 lg:via-transparent lg:to-transparent"></div>
+              <div class="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-basalt/80 backdrop-blur-md border border-ivory/[0.12]">
+                <div>
+                  <div class="text-xs font-mono text-gold">Общий вес сета</div>
+                  <div class="text-sm font-semibold text-ivory">~1,9 кг горячей еды + напитки</div>
+                </div>
+                <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-elevated border border-copper/40 text-gold">Готов за 20 мин</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- 6. GUEST REVIEWS & ATMOSPHERIC LOCATION SECTION                     -->
+    <!-- =================================================================== -->
+    <section id="reviews" class="py-16 sm:py-24 bg-basalt">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Left Column: Guest Reviews -->
+          <div class="lg:col-span-6 reveal">
+            <div class="rounded-2xl bg-stoneDark border border-ivory/[0.09] p-6 sm:p-8">
+              <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-ivory/[0.09] mb-6">
+                <div>
+                  <span class="font-mono text-xs uppercase tracking-[0.16em] text-copper">Репутация в Поляне</span>
+                  <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ivory mt-1">Отзывы гостей</h2>
+                </div>
+                <div class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-elevated border border-copper/35">
+                  <span class="font-mono text-2xl font-bold text-gold">4.9</span>
+                  <div class="leading-tight">
+                    <div class="text-gold text-xs tracking-widest">★★★★★</div>
+                    <div class="text-[11px] text-taupe font-mono">Яндекс Карты</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <!-- Review 1 -->
+                <article class="relative rounded-xl bg-basalt/70 border border-ivory/[0.07] p-5 hover:border-copper/30 transition-colors">
+                  <div class="flex items-center justify-between gap-2 mb-2.5">
+                    <div class="flex items-center gap-3">
+                      <div class="w-9 h-9 rounded-full bg-elevated border border-copper/35 flex items-center justify-center font-serif text-base font-semibold text-gold">АМ</div>
+                      <div>
+                        <div class="text-sm font-semibold text-ivory">Алексей М.</div>
+                        <div class="text-[11px] font-mono text-taupe">Приезжает из Эстосадка</div>
+                      </div>
+                    </div>
+                    <span class="text-gold text-xs tracking-wider">★★★★★</span>
+                  </div>
+                  <p class="text-sm text-ivory/80 leading-relaxed">
+                    «Специально заезжаем сюда из Эстосадка. Шаурма за 370 ₽ огромная, курица с настоящим дымком мангала, а пока ждёшь заказ — угощают горячим турецким чаем в тюльпане и свежей лепёшкой. Уровень отношения к гостям — космос».
+                  </p>
+                </article>
+
+                <!-- Review 2 -->
+                <article class="relative rounded-xl bg-basalt/70 border border-ivory/[0.07] p-5 hover:border-copper/30 transition-colors">
+                  <div class="flex items-center justify-between gap-2 mb-2.5">
+                    <div class="flex items-center gap-3">
+                      <div class="w-9 h-9 rounded-full bg-elevated border border-copper/35 flex items-center justify-center font-serif text-base font-semibold text-gold">ЕК</div>
+                      <div>
+                        <div class="text-sm font-semibold text-ivory">Екатерина К.</div>
+                        <div class="text-[11px] font-mono text-taupe">Красная Поляна</div>
+                      </div>
+                    </div>
+                    <span class="text-gold text-xs tracking-wider">★★★★★</span>
+                  </div>
+                  <p class="text-sm text-ivory/80 leading-relaxed">
+                    «Искандер-кебаб и хачапури по-аджарски — просто восторг! Очень радушный хозяин, открывается невероятный вид на горы с веранды, а порции честные и по-домашнему сытные».
+                  </p>
+                </article>
+
+                <!-- Review 3 -->
+                <article class="relative rounded-xl bg-basalt/70 border border-ivory/[0.07] p-5 hover:border-copper/30 transition-colors">
+                  <div class="flex items-center justify-between gap-2 mb-2.5">
+                    <div class="flex items-center gap-3">
+                      <div class="w-9 h-9 rounded-full bg-elevated border border-copper/35 flex items-center justify-center font-serif text-base font-semibold text-gold">ДВ</div>
+                      <div>
+                        <div class="text-sm font-semibold text-ivory">Дмитрий В.</div>
+                        <div class="text-[11px] font-mono text-taupe">Роза Хутор</div>
+                      </div>
+                    </div>
+                    <span class="text-gold text-xs tracking-wider">★★★★★</span>
+                  </div>
+                  <p class="text-sm text-ivory/80 leading-relaxed">
+                    «Лучшее соотношение цены и качества в Красной Поляне. Удобно заранее написать в WhatsApp по пути со склона и через 15 минут забрать горячий ужин прямо в апартаменты».
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Atmospheric Location & Contacts -->
+          <div id="contacts" class="lg:col-span-6 reveal" style="transition-delay: 100ms;">
+            <div class="rounded-2xl bg-stoneDark border border-ivory/[0.09] overflow-hidden">
+              <!-- Stylized Dark Topographic Alpine Location Visual Header -->
+              <div class="relative h-52 sm:h-56 bg-basalt border-b border-ivory/[0.09] overflow-hidden">
+                <svg class="w-full h-full object-cover" viewBox="0 0 640 240" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <!-- Topographic Contour Lines -->
+                  <path d="M-20 40 C 120 10, 210 90, 340 55 C 470 20, 540 80, 660 45" stroke="#C8824B" stroke-opacity="0.16" stroke-width="1.2" />
+                  <path d="M-20 75 C 110 45, 220 125, 360 85 C 490 48, 560 110, 660 75" stroke="#C8824B" stroke-opacity="0.12" stroke-width="1.2" />
+                  <path d="M-20 115 C 130 85, 230 160, 380 120 C 510 85, 570 140, 660 115" stroke="#F5F0EA" stroke-opacity="0.07" stroke-width="1" />
+                  <path d="M-20 155 C 140 130, 250 200, 410 155 C 530 122, 580 175, 660 150" stroke="#F5F0EA" stroke-opacity="0.06" stroke-width="1" />
+                  <path d="M-20 198 C 160 170, 280 230, 440 190 C 550 160, 595 208, 660 192" stroke="#C8824B" stroke-opacity="0.14" stroke-width="1.2" />
+                  <!-- Mountain Ridge Silhouette -->
+                  <path d="M0 175 L88 108 L158 148 L255 68 L345 135 L450 56 L545 128 L640 88 L640 240 L0 240 Z" fill="url(#topoRidge)" />
+                  <!-- River Mzymta Curve -->
+                  <path d="M0 205 C 140 180, 240 218, 355 186 C 460 156, 545 190, 640 165" stroke="#E3A875" stroke-opacity="0.28" stroke-width="2.5" stroke-dasharray="6 6" />
+                  <!-- Grid Hairlines -->
+                  <line x1="160" y1="0" x2="160" y2="240" stroke="#F5F0EA" stroke-opacity="0.04" />
+                  <line x1="320" y1="0" x2="320" y2="240" stroke="#F5F0EA" stroke-opacity="0.04" />
+                  <line x1="480" y1="0" x2="480" y2="240" stroke="#F5F0EA" stroke-opacity="0.04" />
+                  <defs>
+                    <linearGradient id="topoRidge" x1="320" y1="56" x2="320" y2="240" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#C8824B" stop-opacity="0.16" />
+                      <stop offset="1" stop-color="#0D0C0B" stop-opacity="0.92" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+                <!-- Coordinate Badge -->
+                <div class="absolute top-4 left-4 px-3 py-1 rounded-lg bg-basalt/80 backdrop-blur-md border border-ivory/[0.1] font-mono text-[11px] text-taupe">
+                  43.6799° N · 40.2055° E
+                </div>
+
+                <!-- Pulsing Copper Map Pin -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                  <div class="relative flex items-center justify-center">
+                    <span class="absolute w-14 h-14 rounded-full bg-copper/25 animate-ping"></span>
+                    <span class="relative w-10 h-10 rounded-full bg-gradient-to-br from-gold to-copper border-2 border-basalt shadow-copper-glow flex items-center justify-center text-basalt font-serif font-bold text-sm">
+                      AK
+                    </span>
+                  </div>
+                  <div class="mt-2 px-3 py-1 rounded-lg bg-basalt/90 backdrop-blur-md border border-copper/45 text-xs font-semibold text-ivory shadow-lg whitespace-nowrap">
+                    ул. Волоколамская, 11
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Rows & Actions -->
+              <div class="p-6 sm:p-8">
+                <span class="font-mono text-xs uppercase tracking-[0.16em] text-copper">Локация и связь</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-ivory mt-1 mb-6">Как нас найти</h2>
+
+                <div class="divide-y divide-ivory/[0.08] border-t border-b border-ivory/[0.08] mb-7">
+                  <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                    <span class="text-sm text-taupe">Адрес</span>
+                    <span class="text-sm font-semibold text-ivory sm:text-right">пгт Красная Поляна, ул. Волоколамская, 11</span>
+                  </div>
+                  <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                    <span class="text-sm text-taupe">Режим работы</span>
+                    <span class="text-sm font-mono font-medium text-ivory sm:text-right">Ежедневно, 10:00 – 23:00</span>
+                  </div>
+                  <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                    <span class="text-sm text-taupe">Телефон / WhatsApp</span>
+                    <a href="tel:+79884124400" class="text-sm font-mono font-medium text-gold hover:text-ivory transition-colors sm:text-right">+7 (988) 412-44-00</a>
+                  </div>
+                  <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                    <span class="text-sm text-taupe">Формат</span>
+                    <span class="text-sm font-semibold text-ivory sm:text-right">Веранда с видом на горы / Предзаказ с собой</span>
+                  </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://yandex.ru/maps/org/antalya_kebab/2763126472/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-gradient-to-r from-copper to-gold text-basalt font-bold text-sm hover:brightness-110 transition-all min-h-[48px]"
+                  >
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>Открыть в Яндекс Картах</span>
+                  </a>
+                  <button
+                    type="button"
+                    onclick="copyAddress()"
+                    class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-elevated border border-ivory/[0.14] hover:border-copper/60 text-ivory font-semibold text-sm transition-colors min-h-[48px]"
+                  >
+                    <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    <span>Скопировать адрес</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-ivory/[0.09] bg-stoneDark/50 pb-24 lg:pb-10 pt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-taupe">
+      <div class="flex items-center gap-3">
+        <span class="font-serif text-lg font-bold text-gold">AK</span>
+        <span>© Анталья Кебаб · пгт Красная Поляна, ул. Волоколамская, 11</span>
+      </div>
+      <div class="font-mono text-taupe/80">Прямой предзаказ в WhatsApp · 0% комиссий агрегаторов</div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- DISH CUSTOMIZER MODAL                                                 -->
+  <!-- ===================================================================== -->
+  <div id="dish-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md" onclick="if(event.target === this) closeDishModal()">
+    <div class="relative w-full max-w-lg rounded-2xl bg-stoneDark border border-copper/45 overflow-hidden shadow-card-deep max-h-[92vh] flex flex-col">
+      <!-- Modal Photo Header -->
+      <div class="relative h-52 sm:h-56 bg-elevated shrink-0">
+        <img id="modal-img" src="" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-stoneDark via-stoneDark/30 to-black/30"></div>
+        <button
+          type="button"
+          onclick="closeDishModal()"
+          class="absolute top-3.5 right-3.5 w-10 h-10 rounded-xl bg-basalt/80 backdrop-blur-md border border-ivory/[0.15] text-ivory hover:border-copper flex items-center justify-center transition-colors"
+          aria-label="Закрыть окно настройки блюда"
+        >
+          ✕
+        </button>
+        <div class="absolute bottom-3.5 left-5 right-5 flex items-end justify-between gap-3">
+          <div>
+            <span id="modal-badge" class="inline-block px-2.5 py-0.5 rounded-md bg-basalt/80 border border-ivory/[0.12] font-mono text-[10px] uppercase tracking-wider text-gold mb-1.5"></span>
+            <h3 id="modal-title" class="font-serif text-2xl sm:text-3xl font-semibold text-ivory leading-tight"></h3>
+          </div>
+          <span id="modal-weight" class="font-mono text-xs text-taupe shrink-0 bg-basalt/75 px-2.5 py-1 rounded-md border border-ivory/[0.08]"></span>
+        </div>
+      </div>
+
+      <!-- Modal Scrollable Options -->
+      <div class="p-5 sm:p-6 overflow-y-auto space-y-5 flex-1">
+        <p id="modal-desc" class="text-sm text-taupe leading-relaxed"></p>
+
+        <!-- Spice Selector -->
+        <div>
+          <label class="block font-mono text-[11px] uppercase tracking-widest text-copper mb-2.5">Острота</label>
+          <div id="spice-options" class="grid grid-cols-3 gap-2"></div>
+        </div>
+
+        <!-- Sauce Selector -->
+        <div>
+          <label class="block font-mono text-[11px] uppercase tracking-widest text-copper mb-2.5">Соус</label>
+          <div id="sauce-options" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>
+        </div>
+
+        <!-- Optional Toppings -->
+        <div>
+          <label class="block font-mono text-[11px] uppercase tracking-widest text-copper mb-2.5">Добавки по вкусу</label>
+          <div id="topping-options" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></div>
+        </div>
+      </div>
+
+      <!-- Modal Footer: Qty + Add CTA -->
+      <div class="p-5 sm:p-6 border-t border-ivory/[0.09] bg-basalt/80 flex items-center justify-between gap-3 shrink-0">
+        <div class="inline-flex items-center rounded-xl bg-stoneDark border border-ivory/[0.12] p-1">
+          <button type="button" onclick="changeModalQty(-1)" class="w-9 h-9 rounded-lg hover:bg-elevated text-ivory font-bold text-lg flex items-center justify-center transition-colors">−</button>
+          <span id="modal-qty" class="w-9 text-center font-mono text-sm font-semibold text-ivory">1</span>
+          <button type="button" onclick="changeModalQty(1)" class="w-9 h-9 rounded-lg hover:bg-elevated text-ivory font-bold text-lg flex items-center justify-center transition-colors">+</button>
+        </div>
+
+        <button
+          type="button"
+          id="modal-add-btn"
+          onclick="confirmAddFromModal()"
+          class="flex-1 py-3.5 px-5 rounded-xl bg-gradient-to-r from-copper to-gold text-basalt font-bold text-sm shadow-copper-glow hover:brightness-110 transition-all min-h-[48px]"
+        >
+          Добавить в заказ · 0 ₽
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 7. PRO-LEVEL SLIDE-OVER CART DRAWER                                   -->
+  <!-- ===================================================================== -->
+  <div id="cart-backdrop" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm transition-opacity duration-300" onclick="if(event.target === this) closeCartDrawer()">
+    <aside
+      id="cart-drawer"
+      class="ml-auto w-full max-w-md h-full bg-stoneDark border-l border-copper/35 shadow-card-deep flex flex-col transform translate-x-full transition-transform duration-300 ease-out"
+      aria-label="Корзина заказа"
+    >
+      <!-- Drawer Header -->
+      <div class="px-6 py-5 border-b border-ivory/[0.09] flex items-center justify-between gap-3 shrink-0">
+        <div>
+          <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-ivory leading-none">Ваш предзаказ</h3>
+          <p class="font-mono text-[11px] text-taupe mt-1">Напрямую на кухню · без комиссий</p>
+        </div>
+        <button
+          type="button"
+          onclick="closeCartDrawer()"
+          class="w-10 h-10 rounded-xl bg-elevated border border-ivory/[0.1] hover:border-copper text-ivory flex items-center justify-center transition-colors"
+          aria-label="Закрыть корзину"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Chef's Compliment Gold Banner -->
+      <div class="mx-6 mt-4 px-3.5 py-2.5 rounded-xl bg-copper/12 border border-copper/35 flex items-center gap-2.5 shrink-0">
+        <span class="w-2 h-2 rounded-full bg-gold shrink-0"></span>
+        <span class="text-xs font-medium text-gold">+ Чай и тёплая лепёшка в подарок от шефа к каждому заказу</span>
+      </div>
+
+      <!-- Scrollable Cart Items + Order Form -->
+      <div class="flex-1 overflow-y-auto px-6 py-4 space-y-5">
+        <!-- Items List -->
+        <div id="cart-items-list" class="space-y-3"></div>
+
+        <!-- Order Form (visible when cart has items or always accessible) -->
+        <div id="cart-order-form" class="space-y-4 pt-3 border-t border-ivory/[0.09]">
+          <!-- Pickup / Dine-in Segmented Control -->
+          <div>
+            <span class="block font-mono text-[11px] uppercase tracking-widest text-taupe mb-2">Формат получения</span>
+            <div class="grid grid-cols-2 p-1 rounded-xl bg-basalt border border-ivory/[0.09]">
+              <button type="button" id="fmt-pickup" onclick="setOrderFormat('С собой (самовывоз)')" class="py-2.5 px-3 rounded-lg text-xs font-semibold transition-all bg-copper text-basalt">
+                С собой (самовывоз)
+              </button>
+              <button type="button" id="fmt-dinein" onclick="setOrderFormat('На веранде в кафе')" class="py-2.5 px-3 rounded-lg text-xs font-medium transition-all text-taupe hover:text-ivory">
+                На веранде в кафе
+              </button>
+            </div>
+          </div>
+
+          <!-- Time Selector Pills -->
+          <div>
+            <span class="block font-mono text-[11px] uppercase tracking-widest text-taupe mb-2">Время готовности</span>
+            <div class="grid grid-cols-3 gap-2">
+              <button type="button" data-time="Через 15–20 мин" onclick="setOrderTime('Через 15–20 мин')" class="time-pill py-2.5 px-2 rounded-xl text-xs font-semibold border transition-all bg-copper/15 border-copper text-gold">
+                Через 15–20 мин
+              </button>
+              <button type="button" data-time="Через 30 мин" onclick="setOrderTime('Через 30 мин')" class="time-pill py-2.5 px-2 rounded-xl text-xs font-medium border transition-all bg-basalt border-ivory/[0.09] text-taupe hover:text-ivory">
+                Через 30 мин
+              </button>
+              <button type="button" data-time="Ко времени" onclick="setOrderTime('Ко времени')" class="time-pill py-2.5 px-2 rounded-xl text-xs font-medium border transition-all bg-basalt border-ivory/[0.09] text-taupe hover:text-ivory">
+                Ко времени
+              </button>
+            </div>
+            <!-- Custom Time Input -->
+            <div id="custom-time-wrap" class="hidden mt-2.5">
+              <input
+                type="time"
+                id="custom-time-input"
+                value="19:30"
+                oninput="updateWhatsAppPreview()"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-basalt border border-copper/45 text-sm font-mono text-ivory focus:outline-none focus:border-gold"
+              />
+            </div>
+          </div>
+
+          <!-- Guest Name & Comment -->
+          <div class="grid grid-cols-1 gap-2.5">
+            <input
+              type="text"
+              id="guest-name"
+              oninput="saveFormState(); updateWhatsAppPreview()"
+              placeholder="Ваше имя (например, Алексей)"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-basalt border border-ivory/[0.1] text-sm text-ivory placeholder:text-taupe/70 focus:outline-none focus:border-copper"
+            />
+            <textarea
+              id="guest-comment"
+              rows="2"
+              oninput="saveFormState(); updateWhatsAppPreview()"
+              placeholder="Комментарий кухне: количество приборов, без кинзы..."
+              class="w-full px-3.5 py-2.5 rounded-xl bg-basalt border border-ivory/[0.1] text-sm text-ivory placeholder:text-taupe/70 focus:outline-none focus:border-copper resize-none"
+            ></textarea>
+          </div>
+
+          <!-- Expandable Live Preview of WhatsApp Message -->
+          <div class="rounded-xl bg-basalt/80 border border-ivory/[0.09] overflow-hidden">
+            <button
+              type="button"
+              onclick="toggleWaPreview()"
+              class="w-full px-3.5 py-2.5 flex items-center justify-between text-xs font-mono text-taupe hover:text-ivory transition-colors"
+            >
+              <span>Предпросмотр сообщения WhatsApp</span>
+              <span id="wa-preview-chevron" class="transition-transform duration-200">▾</span>
+            </button>
+            <pre id="wa-preview-box" class="hidden px-3.5 pb-3.5 pt-1 text-[11px] font-mono text-ivory/80 whitespace-pre-wrap leading-relaxed border-t border-ivory/[0.06]"></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sticky Drawer Footer -->
+      <div class="px-6 py-4 border-t border-ivory/[0.09] bg-basalt/90 space-y-3 shrink-0">
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-taupe">Итого к оплате в кафе:</span>
+          <span id="drawer-total" class="font-mono text-2xl font-bold text-ivory">0 ₽</span>
+        </div>
+
+        <button
+          type="button"
+          onclick="sendOrderToWhatsApp()"
+          class="w-full py-3.5 px-5 rounded-xl bg-gradient-to-r from-copper to-gold text-basalt font-bold text-sm shadow-copper-glow hover:brightness-110 transition-all flex items-center justify-center gap-2 min-h-[48px]"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.1">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+          <span>Отправить заказ в WhatsApp</span>
+        </button>
+
+        <button
+          type="button"
+          onclick="copyOrderText()"
+          class="w-full py-2.5 px-4 rounded-xl bg-elevated border border-ivory/[0.11] hover:border-copper/60 text-ivory/90 font-medium text-xs transition-colors min-h-[42px]"
+        >
+          Скопировать текст заказа
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- FLOATING MOBILE BOTTOM CART BAR                                       -->
+  <!-- ===================================================================== -->
+  <div id="mobile-cart-bar" class="lg:hidden fixed bottom-4 inset-x-4 z-30 transition-all duration-300 translate-y-24 opacity-0 pointer-events-none">
+    <button
+      type="button"
+      onclick="openCartDrawer()"
+      class="w-full flex items-center justify-between px-5 py-3.5 rounded-2xl bg-gradient-to-r from-copper to-gold text-basalt shadow-copper-glow active:scale-[0.98] transition-transform min-h-[54px]"
+    >
+      <div class="flex items-center gap-3">
+        <span id="mobile-bar-count" class="px-2.5 py-0.5 rounded-lg bg-basalt text-gold font-mono text-xs font-bold">0</span>
+        <span class="font-bold text-sm">Открыть предзаказ</span>
+      </div>
+      <span id="mobile-bar-total" class="font-mono font-bold text-base">0 ₽</span>
+    </button>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-20 lg:bottom-6 left-1/2 -translate-x-1/2 z-[100] flex flex-col items-center gap-2 pointer-events-none w-[90%] max-w-sm"></div>
+
+  <!-- ===================================================================== -->
+  <!-- APPLICATION LOGIC (MENU, CUSTOMIZER, CART, WHATSAPP, EMBERS, CLOCK)   -->
+  <!-- ===================================================================== -->
+  <script>
+    'use strict';
+
+    // -----------------------------------------------------------------------
+    // 1. MENU CATALOG & CONFIGURATION DATA
+    // -----------------------------------------------------------------------
+    const WHATSAPP_PHONE = '79884124400';
+    const CAFE_ADDRESS = 'пгт Красная Поляна, ул. Волоколамская, 11';
+    const STORAGE_KEY = 'antalya_kebab_polyana_cart_v2';
+    const FORM_STORAGE_KEY = 'antalya_kebab_polyana_form_v2';
+
+    const MENU_ITEMS = [
+      {
+        id: 'shawarma',
+        cat: 'shawarma',
+        badge: 'Хит продаж',
+        name: 'Фирменная шаурма с курицей',
+        weight: '420 г',
+        price: 370,
+        img: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80',
+        fallback: 'https://placehold.co/800x560/1E1B18/E3A875?text=Charcoal+Shawarma',
+        desc: 'Сочное куриное филе с мангала, хрустящие овощи, фирменный белый и томатный соусы в тонком подрумяненном лаваше.',
+      },
+      {
+        id: 'iskander',
+        cat: 'grill',
+        badge: 'Мангал',
+        name: 'Искандер-кебаб',
+        weight: '450 г',
+        price: 650,
+        img: 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80',
+        fallback: 'https://placehold.co/800x560/1E1B18/E3A875?text=Iskander+Kebab',
+        desc: 'Тонкие ломтики мяса с углей на подушке из румяной питы под горячим томатным соусом, топлёным маслом и нежным йогуртом.',
+      },
+      {
+        id: 'lula',
+        cat: 'grill',
+        badge: 'Мангал',
+        name: 'Люля-кебаб на углях',
+        weight: '320 г',
+        price: 560,
+        img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80',
+        fallback: 'https://placehold.co/800x560/1E1B18/E3A875?text=Lula+Kebab',
+        desc: 'Рубленое мясо с ароматными восточными специями, обжаренное на открытом огне. Подаётся с маринованным луком, зеленью и лепёшкой.',
+      },
+      {
+        id: 'chicken',
+        cat: 'grill',
+        badge: 'Мангал',
+        name: 'Куриная грудка на углях',
+        weight: '350 г',
+        price: 520,
+        img: 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=800&q=80',
+        fallback: 'https://placehold.co/800x560/1E1B18/E3A875?text=Grilled+Chicken',
+        desc: 'Нежное филе суточного турецкого маринада с овощами гриль и авторским сливочно-чесночным соусом.',
+      },
+      {
+        id: 'khachapuri',
+        cat: 'shawarma',
+        badge: 'Выпечка',
+        name: 'Хачапури по-аджарски',
+        weight: '400 г',
+        price: 490,
+        img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80',
+        fallback: 'https://placehold.co/800x560/1E1B18/E3A875?text=Khachapuri',
+        desc: 'Золотистая лодочка из печи с тягучим домашним сулугуни, фермерским сливочным маслом и деревенским желтком.',
+      },
+      {
+        id: 'fries',
+        cat: 'sides',
+        badge: 'Гарнир',
+        name: 'Картофель фри XL',
+        weight: '250 г',
+        price: 260,
+        img: 'https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=800&q=80',
+        fallback: 'https://placehold.co/800x560/1E1B18/E3A875?text=Crispy+Fries+XL',
+        desc: 'Большая порция золотистого хрустящего картофеля с крупной морской солью и соусом на выбор.',
+      },
+      {
+        id: 'ayran',
+        cat: 'sides',
+        badge: 'Напиток',
+        name: 'Домашний турецкий айран',
+        weight: '300 мл',
+        price: 140,
+        img: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80',
+        fallback: 'https://placehold.co/800x560/1E1B18/E3A875?text=Turkish+Ayran',
+        desc: 'Охлаждённый кисломолочный напиток со свежей воздушной пенкой — идеальный баланс к блюдам с мангала.',
+      },
+      {
+        id: 'tea',
+        cat: 'sides',
+        badge: 'Комплимент',
+        name: 'Турецкий чай и тёплая лепёшка',
+        weight: 'Порция',
+        price: 0,
+        img: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
+        fallback: 'https://placehold.co/800x560/1E1B18/E3A875?text=Turkish+Tea',
+        desc: 'Крепкий заварной чай в стеклянном тюльпане и горячая лепёшка из печи в подарок каждому гостю.',
+      },
+    ];
+
+    const COMBO_ITEM = {
+      id: 'combo_evening_polyana',
+      name: 'Сет «Вечер в Поляне» на двоих',
+      weight: '~1,9 кг',
+      price: 1590,
+      summary: 'Искандер-кебаб + Шаурма + Хачапури + 2 айрана + чай и лепёшка в подарок',
+    };
+
+    const SPICE_CHOICES = ['Неострый', 'Классический', 'Острый'];
+    const SAUCE_CHOICES = ['Фирменный белый', 'Томатный на углях', 'Гранатовый'];
+    const TOPPING_CHOICES = [
+      { id: 'no_onion', label: 'Без лука', price: 0 },
+      { id: 'suluguni', label: 'Сыр сулугуни', price: 70 },
+      { id: 'jalapeno', label: 'Халапеньо', price: 50 },
+      { id: 'flatbread', label: 'Тёплая лепёшка', price: 60 },
+    ];
+
+    // -----------------------------------------------------------------------
+    // 2. APPLICATION STATE
+    // -----------------------------------------------------------------------
+    let activeCategory = 'all';
+    let searchQuery = '';
+    let cart = [];
+    let orderState = {
+      format: 'С собой (самовывоз)',
+      timeMode: 'Через 15–20 мин',
+      customTime: '19:30',
+      name: '',
+      comment: '',
+    };
+
+    // Modal state
+    let modalDish = null;
+    let modalSpice = 'Классический';
+    let modalSauce = 'Фирменный белый';
+    let modalToppings = new Set();
+    let modalQty = 1;
+
+    // -----------------------------------------------------------------------
+    // 3. HELPERS (PRICE FORMATTING, STORAGE, CLIPBOARD, TOAST)
+    // -----------------------------------------------------------------------
+    function formatRub(amount) {
+      if (amount === 0) return 'В подарок';
+      return `${Number(amount).toLocaleString('ru-RU')} ₽`;
+    }
+
+    function formatRubNumeric(amount) {
+      return `${Number(amount).toLocaleString('ru-RU')} ₽`;
+    }
+
+    function loadState() {
+      try {
+        const savedCart = localStorage.getItem(STORAGE_KEY);
+        if (savedCart) {
+          const parsed = JSON.parse(savedCart);
+          if (Array.isArray(parsed)) cart = parsed;
+        }
+        const savedForm = localStorage.getItem(FORM_STORAGE_KEY);
+        if (savedForm) {
+          const parsedForm = JSON.parse(savedForm);
+          if (parsedForm && typeof parsedForm === 'object') {
+            orderState = { ...orderState, ...parsedForm };
+          }
+        }
+      } catch (e) {
+        // Ignore storage restrictions
+      }
+    }
+
+    function saveCart() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+      } catch (e) {
+        // Ignore storage restrictions
+      }
+    }
+
+    function saveFormState() {
+      const nameEl = document.getElementById('guest-name');
+      const commentEl = document.getElementById('guest-comment');
+      const timeEl = document.getElementById('custom-time-input');
+      if (nameEl) orderState.name = nameEl.value;
+      if (commentEl) orderState.comment = commentEl.value;
+      if (timeEl) orderState.customTime = timeEl.value;
+      try {
+        localStorage.setItem(FORM_STORAGE_KEY, JSON.stringify(orderState));
+      } catch (e) {
+        // Ignore storage restrictions
+      }
+    }
+
+    function copyTextFallback(text, successMessage) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.top = '-9999px';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        showToast(successMessage);
+      } catch (err) {
+        showToast('Не удалось скопировать автоматически');
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    }
+
+    function showToast(message) {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = 'px-4 py-3 rounded-xl bg-elevated/95 backdrop-blur-xl border border-copper/55 text-ivory text-xs sm:text-sm font-medium shadow-card-deep flex items-center gap-2.5 transition-all duration-300 opacity-0 translate-y-2';
+      toast.innerHTML = `<span class="w-2 h-2 rounded-full bg-gold shrink-0"></span><span>${escapeHtml(message)}</span>`;
+      container.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        toast.classList.remove('opacity-0', 'translate-y-2');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 2600);
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // -----------------------------------------------------------------------
+    // 4. LIVE MOSCOW TIME (UTC+3) OPEN/CLOSED INDICATOR
+    // -----------------------------------------------------------------------
+    function updateMoscowStatus() {
+      const now = new Date();
+      // Compute Moscow time cleanly via UTC offset (+3 hours)
+      const utcMs = now.getTime() + now.getTimezoneOffset() * 60000;
+      const msk = new Date(utcMs + 3 * 3600000);
+      const hour = msk.getHours();
+      const minutes = String(msk.getMinutes()).padStart(2, '0');
+      const isOpen = hour >= 10 && hour < 23;
+
+      const dotDesktop = document.getElementById('live-status-dot');
+      const textDesktop = document.getElementById('live-status-text');
+      const dotMobile = document.getElementById('mobile-status-dot');
+      const textMobile = document.getElementById('mobile-status-text');
+
+      if (isOpen) {
+        dotDesktop.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse';
+        textDesktop.textContent = `Открыто · до 23:00 (${hour}:${minutes} МСК)`;
+        dotMobile.className = 'w-2 h-2 rounded-full bg-emerald-400';
+        textMobile.textContent = `Открыто · до 23:00 МСК`;
+      } else {
+        dotDesktop.className = 'w-2 h-2 rounded-full bg-copper';
+        textDesktop.textContent = `Откроемся в 10:00 (${hour}:${minutes} МСК)`;
+        dotMobile.className = 'w-2 h-2 rounded-full bg-copper';
+        textMobile.textContent = `Откроемся в 10:00 МСК`;
+      }
+    }
+
+    // -----------------------------------------------------------------------
+    // 5. MENU RENDERING & FILTERING
+    // -----------------------------------------------------------------------
+    function setCategory(cat, btnEl) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-pill').forEach((btn) => {
+        const isActive = btn.getAttribute('data-cat') === cat;
+        btn.className = isActive
+          ? 'cat-pill shrink-0 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 min-h-[44px] bg-copper text-basalt border border-copper'
+          : 'cat-pill shrink-0 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 min-h-[44px] bg-stoneDark text-taupe border border-ivory/[0.09] hover:border-copper/50 hover:text-ivory';
+      });
+      renderMenu();
+    }
+
+    function handleSearch(val) {
+      searchQuery = val.trim().toLowerCase();
+      const clearBtn = document.getElementById('clear-search-btn');
+      clearBtn.classList.toggle('hidden', searchQuery.length === 0);
+      renderMenu();
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('menu-search');
+      input.value = '';
+      handleSearch('');
+    }
+
+    function resetMenuFilters() {
+      clearSearch();
+      setCategory('all');
+    }
+
+    function getDefaultCartItem(dishId) {
+      return cart.find((c) => c.key === `${dishId}::default`);
+    }
+
+    function renderMenu() {
+      const grid = document.getElementById('menu-grid');
+      const emptyEl = document.getElementById('menu-empty');
+
+      const filtered = MENU_ITEMS.filter((item) => {
+        const matchesCat = activeCategory === 'all' || item.cat === activeCategory;
+        const matchesSearch =
+          !searchQuery ||
+          item.name.toLowerCase().includes(searchQuery) ||
+          item.desc.toLowerCase().includes(searchQuery) ||
+          item.badge.toLowerCase().includes(searchQuery);
+        return matchesCat && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyEl.classList.remove('hidden');
+        return;
+      }
+
+      emptyEl.classList.add('hidden');
+
+      grid.innerHTML = filtered
+        .map((item) => {
+          const defaultInCart = getDefaultCartItem(item.id);
+          const isCompliment = item.price === 0;
+
+          const actionControl = defaultInCart
+            ? `
+              <div class="inline-flex items-center rounded-xl bg-basalt border border-copper/60 p-0.5">
+                <button type="button" onclick="event.stopPropagation(); updateCartQtyByKey('${defaultInCart.key}', -1)" class="w-8 h-8 rounded-lg hover:bg-elevated text-gold font-bold text-base flex items-center justify-center transition-colors" aria-label="Уменьшить количество">−</button>
+                <span class="w-7 text-center font-mono text-xs font-bold text-ivory">${defaultInCart.qty}</span>
+                <button type="button" onclick="event.stopPropagation(); updateCartQtyByKey('${defaultInCart.key}', 1)" class="w-8 h-8 rounded-lg hover:bg-elevated text-gold font-bold text-base flex items-center justify-center transition-colors" aria-label="Увеличить количество">+</button>
+              </div>
+            `
+            : `
+              <button
+                type="button"
+                onclick="event.stopPropagation(); quickAddDish('${item.id}')"
+                class="px-3.5 py-2 rounded-xl bg-copper hover:bg-gold text-basalt font-bold text-xs transition-all active:scale-95 min-h-[38px] whitespace-nowrap"
+              >
+                + В заказ
+              </button>
+            `;
+
+          return `
+            <article class="group rounded-2xl bg-stoneDark border border-ivory/[0.09] hover:border-copper/50 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-card-deep">
+              <div>
+                <!-- Clickable Photo Area -->
+                <div onclick="openDishModal('${item.id}')" class="relative h-48 bg-elevated overflow-hidden cursor-pointer border-b border-ivory/[0.08]">
+                  <img
+                    src="${item.img}"
+                    alt="${escapeHtml(item.name)}"
+                    loading="lazy"
+                    onerror="this.src='${item.fallback}'"
+                    class="w-full h-full object-cover object-center brightness-90 group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-stoneDark/85 via-transparent to-black/25"></div>
+
+                  <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-basalt/80 backdrop-blur-md border border-ivory/[0.12] font-mono text-[10px] uppercase tracking-wider ${isCompliment ? 'text-gold border-copper/45' : 'text-ivory/85'}">
+                    ${escapeHtml(item.badge)}
+                  </span>
+
+                  <span class="absolute bottom-3 right-3 px-2 py-0.5 rounded-md bg-basalt/75 backdrop-blur-md border border-ivory/[0.1] font-mono text-[11px] text-taupe">
+                    ${escapeHtml(item.weight)}
+                  </span>
+                </div>
+
+                <!-- Card Text Body -->
+                <div class="p-5 pb-3">
+                  <h3 onclick="openDishModal('${item.id}')" class="font-serif text-2xl font-semibold text-ivory leading-snug cursor-pointer group-hover:text-gold transition-colors mb-2">
+                    ${escapeHtml(item.name)}
+                  </h3>
+                  <p class="text-xs sm:text-[13px] text-taupe leading-relaxed line-clamp-3">
+                    ${escapeHtml(item.desc)}
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card Footer: Price + Customize + Instant Add / Stepper -->
+              <div class="px-5 pb-5 pt-3 mt-auto">
+                <div class="flex items-center justify-between gap-2 pt-3.5 border-t border-ivory/[0.08]">
+                  <div>
+                    <div class="font-mono text-lg font-semibold ${isCompliment ? 'text-gold' : 'text-ivory'}">
+                      ${formatRub(item.price)}
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-1.5">
+                    <button
+                      type="button"
+                      onclick="openDishModal('${item.id}')"
+                      class="px-2.5 py-2 rounded-xl bg-elevated border border-ivory/[0.1] hover:border-copper/50 text-taupe hover:text-ivory text-xs font-medium transition-colors min-h-[38px]"
+                      title="Настроить остроту, соус и добавки"
+                    >
+                      Настроить
+                    </button>
+                    ${actionControl}
+                  </div>
+                </div>
+              </div>
+            </article>
+          `;
+        })
+        .join('');
+    }
+
+    // -----------------------------------------------------------------------
+    // 6. DISH CUSTOMIZER MODAL LOGIC
+    // -----------------------------------------------------------------------
+    function openDishModal(dishId) {
+      const dish = MENU_ITEMS.find((m) => m.id === dishId);
+      if (!dish) return;
+
+      modalDish = dish;
+      modalSpice = 'Классический';
+      modalSauce = 'Фирменный белый';
+      modalToppings = new Set();
+      modalQty = 1;
+
+      const imgEl = document.getElementById('modal-img');
+      imgEl.src = dish.img;
+      imgEl.alt = dish.name;
+      imgEl.onerror = () => {
+        imgEl.src = dish.fallback;
+      };
+
+      document.getElementById('modal-badge').textContent = dish.badge;
+      document.getElementById('modal-title').textContent = dish.name;
+      document.getElementById('modal-weight').textContent = dish.weight;
+      document.getElementById('modal-desc').textContent = dish.desc;
+
+      renderModalOptions();
+      updateModalTotal();
+
+      const modal = document.getElementById('dish-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDishModal() {
+      const modal = document.getElementById('dish-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function renderModalOptions() {
+      document.getElementById('spice-options').innerHTML = SPICE_CHOICES.map((sp) => {
+        const active = modalSpice === sp;
+        return `
+          <button
+            type="button"
+            onclick="selectModalSpice('${sp}')"
+            class="py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all min-h-[42px] ${
+              active
+                ? 'bg-copper/15 border-copper text-gold'
+                : 'bg-basalt border-ivory/[0.09] text-taupe hover:text-ivory hover:border-ivory/25'
+            }"
+          >
+            ${sp}
+          </button>
+        `;
+      }).join('');
+
+      document.getElementById('sauce-options').innerHTML = SAUCE_CHOICES.map((sc) => {
+        const active = modalSauce === sc;
+        return `
+          <button
+            type="button"
+            onclick="selectModalSauce('${sc}')"
+            class="py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all min-h-[42px] ${
+              active
+                ? 'bg-copper/15 border-copper text-gold'
+                : 'bg-basalt border-ivory/[0.09] text-taupe hover:text-ivory hover:border-ivory/25'
+            }"
+          >
+            ${sc}
+          </button>
+        `;
+      }).join('');
+
+      document.getElementById('topping-options').innerHTML = TOPPING_CHOICES.map((tp) => {
+        const checked = modalToppings.has(tp.id);
+        return `
+          <button
+            type="button"
+            onclick="toggleModalTopping('${tp.id}')"
+            class="flex items-center justify-between gap-2 py-2.5 px-3.5 rounded-xl text-xs border transition-all min-h-[42px] ${
+              checked
+                ? 'bg-copper/15 border-copper text-ivory font-semibold'
+                : 'bg-basalt border-ivory/[0.09] text-taupe hover:text-ivory'
+            }"
+          >
+            <span class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded flex items-center justify-center border ${checked ? 'bg-copper border-copper text-basalt' : 'border-ivory/25'} text-[10px] font-bold">
+                ${checked ? '✓' : ''}
+              </span>
+              <span>${tp.label}</span>
+            </span>
+            <span class="font-mono text-[11px] ${checked ? 'text-gold' : 'text-taupe'}">
+              ${tp.price === 0 ? '+0 ₽' : `+${tp.price} ₽`}
+            </span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectModalSpice(sp) {
+      modalSpice = sp;
+      renderModalOptions();
+    }
+
+    function selectModalSauce(sc) {
+      modalSauce = sc;
+      renderModalOptions();
+    }
+
+    function toggleModalTopping(tpId) {
+      if (modalToppings.has(tpId)) modalToppings.delete(tpId);
+      else modalToppings.add(tpId);
+      renderModalOptions();
+      updateModalTotal();
+    }
+
+    function changeModalQty(delta) {
+      modalQty = Math.max(1, Math.min(20, modalQty + delta));
+      updateModalTotal();
+    }
+
+    function calcModalUnitPrice() {
+      if (!modalDish) return 0;
+      let extra = 0;
+      modalToppings.forEach((tpId) => {
+        const found = TOPPING_CHOICES.find((t) => t.id === tpId);
+        if (found) extra += found.price;
+      });
+      return modalDish.price + extra;
+    }
+
+    function updateModalTotal() {
+      document.getElementById('modal-qty').textContent = modalQty;
+      const total = calcModalUnitPrice() * modalQty;
+      document.getElementById('modal-add-btn').textContent = `Добавить в заказ · ${formatRubNumeric(total)}`;
+    }
+
+    function confirmAddFromModal() {
+      if (!modalDish) return;
+      const toppingsArr = Array.from(modalToppings)
+        .sort()
+        .map((id) => TOPPING_CHOICES.find((t) => t.id === id))
+        .filter(Boolean);
+
+      const isCompletelyDefault =
+        modalSpice === 'Классический' &&
+        modalSauce === 'Фирменный белый' &&
+        toppingsArr.length === 0;
+
+      const key = isCompletelyDefault
+        ? `${modalDish.id}::default`
+        : `${modalDish.id}::${modalSpice}|${modalSauce}|${toppingsArr.map((t) => t.id).join(',')}`;
+
+      const unitPrice = calcModalUnitPrice();
+      const details = [];
+      if (!isCompletelyDefault) {
+        details.push(`Острота: ${modalSpice}`);
+        details.push(`Соус: ${modalSauce}`);
+        if (toppingsArr.length > 0) {
+          details.push(`Добавки: ${toppingsArr.map((t) => t.label).join(', ')}`);
+        }
+      }
+
+      addCartEntry({
+        key,
+        dishId: modalDish.id,
+        name: modalDish.name,
+        unitPrice,
+        qty: modalQty,
+        details: details.join(' · '),
+      });
+
+      closeDishModal();
+      showToast(`Добавлено: ${modalDish.name}`);
+    }
+
+    // -----------------------------------------------------------------------
+    // 7. CART OPERATIONS & RENDERING
+    // -----------------------------------------------------------------------
+    function quickAddDish(dishId) {
+      const dish = MENU_ITEMS.find((m) => m.id === dishId);
+      if (!dish) return;
+      addCartEntry({
+        key: `${dish.id}::default`,
+        dishId: dish.id,
+        name: dish.name,
+        unitPrice: dish.price,
+        qty: 1,
+        details: '',
+      });
+      showToast(`Добавлено: ${dish.name}`);
+    }
+
+    function addComboToCart() {
+      addCartEntry({
+        key: `${COMBO_ITEM.id}::bundle`,
+        dishId: COMBO_ITEM.id,
+        name: COMBO_ITEM.name,
+        unitPrice: COMBO_ITEM.price,
+        qty: 1,
+        details: COMBO_ITEM.summary,
+      });
+      showToast('Сет «Вечер в Поляне» добавлен в заказ');
+      openCartDrawer();
+    }
+
+    function addCartEntry(entry) {
+      const existing = cart.find((c) => c.key === entry.key);
+      if (existing) {
+        existing.qty += entry.qty;
+      } else {
+        cart.push(entry);
+      }
+      saveCart();
+      renderMenu();
+      renderCart();
+    }
+
+    function updateCartQtyByKey(key, delta) {
+      const idx = cart.findIndex((c) => c.key === key);
+      if (idx === -1) return;
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) {
+        cart.splice(idx, 1);
+      }
+      saveCart();
+      renderMenu();
+      renderCart();
+    }
+
+    function removeCartItemByKey(key) {
+      cart = cart.filter((c) => c.key !== key);
+      saveCart();
+      renderMenu();
+      renderCart();
+    }
+
+    function getCartTotals() {
+      const count = cart.reduce((acc, item) => acc + item.qty, 0);
+      const sum = cart.reduce((acc, item) => acc + item.unitPrice * item.qty, 0);
+      return { count, sum };
+    }
+
+    function renderCart() {
+      const { count, sum } = getCartTotals();
+
+      // Update header & mobile floating bar
+      document.getElementById('header-cart-count').textContent = count;
+      document.getElementById('header-cart-total').textContent = formatRubNumeric(sum);
+      document.getElementById('drawer-total').textContent = formatRubNumeric(sum);
+
+      const mobileBar = document.getElementById('mobile-cart-bar');
+      document.getElementById('mobile-bar-count').textContent = count;
+      document.getElementById('mobile-bar-total').textContent = formatRubNumeric(sum);
+
+      if (count > 0) {
+        mobileBar.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      } else {
+        mobileBar.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }
+
+      // Render items inside drawer
+      const listEl = document.getElementById('cart-items-list');
+      if (cart.length === 0) {
+        listEl.innerHTML = `
+          <div class="text-center py-10 px-4 rounded-2xl bg-basalt/60 border border-ivory/[0.07]">
+            <p class="font-serif text-2xl text-ivory mb-1.5">Корзина пока пуста</p>
+            <p class="text-xs text-taupe leading-relaxed mb-4">
+              Выберите блюда с мангала или добавьте готовый сет «Вечер в Поляне» — чай и горячая лепёшка уже ждут вас в подарок.
+            </p>
+            <button type="button" onclick="closeCartDrawer()" class="px-4 py-2 rounded-xl bg-elevated border border-copper/45 text-xs font-semibold text-gold hover:bg-copper hover:text-basalt transition-colors">
+              Выбрать блюда
+            </button>
+          </div>
+        `;
+      } else {
+        listEl.innerHTML = cart
+          .map((item) => {
+            const lineTotal = item.unitPrice * item.qty;
+            return `
+              <div class="p-3.5 rounded-xl bg-basalt/80 border border-ivory/[0.08] flex flex-col gap-2.5">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="min-w-0">
+                    <div class="text-sm font-semibold text-ivory leading-snug">${escapeHtml(item.name)}</div>
+                    ${
+                      item.details
+                        ? `<div class="text-[11px] text-taupe mt-1 leading-relaxed">${escapeHtml(item.details)}</div>`
+                        : ''
+                    }
+                  </div>
+                  <button
+                    type="button"
+                    onclick="removeCartItemByKey('${item.key}')"
+                    class="text-taupe hover:text-ivory p-1 text-xs shrink-0 transition-colors"
+                    aria-label="Удалить позицию"
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                <div class="flex items-center justify-between pt-2 border-t border-ivory/[0.06]">
+                  <span class="font-mono text-sm font-semibold ${lineTotal === 0 ? 'text-gold' : 'text-ivory'}">
+                    ${lineTotal === 0 ? 'В подарок' : formatRubNumeric(lineTotal)}
+                  </span>
+                  <div class="inline-flex items-center gap-1 rounded-lg bg-stoneDark border border-ivory/[0.1] p-0.5">
+                    <button type="button" onclick="updateCartQtyByKey('${item.key}', -1)" class="w-7 h-7 rounded-md hover:bg-elevated text-ivory font-bold text-sm flex items-center justify-center">−</button>
+                    <span class="w-6 text-center font-mono text-xs font-semibold text-ivory">${item.qty}</span>
+                    <button type="button" onclick="updateCartQtyByKey('${item.key}', 1)" class="w-7 h-7 rounded-md hover:bg-elevated text-ivory font-bold text-sm flex items-center justify-center">+</button>
+                  </div>
+                </div>
+              </div>
+            `;
+          })
+          .join('');
+      }
+
+      updateWhatsAppPreview();
+    }
+
+    // -----------------------------------------------------------------------
+    // 8. DRAWER FORM CONTROLS & WHATSAPP MESSAGE BUILDER
+    // -----------------------------------------------------------------------
+    function setOrderFormat(fmt) {
+      orderState.format = fmt;
+      const pickupBtn = document.getElementById('fmt-pickup');
+      const dineinBtn = document.getElementById('fmt-dinein');
+      const isPickup = fmt === 'С собой (самовывоз)';
+
+      pickupBtn.className = isPickup
+        ? 'py-2.5 px-3 rounded-lg text-xs font-semibold transition-all bg-copper text-basalt'
+        : 'py-2.5 px-3 rounded-lg text-xs font-medium transition-all text-taupe hover:text-ivory';
+
+      dineinBtn.className = !isPickup
+        ? 'py-2.5 px-3 rounded-lg text-xs font-semibold transition-all bg-copper text-basalt'
+        : 'py-2.5 px-3 rounded-lg text-xs font-medium transition-all text-taupe hover:text-ivory';
+
+      saveFormState();
+      updateWhatsAppPreview();
+    }
+
+    function setOrderTime(mode) {
+      orderState.timeMode = mode;
+      document.querySelectorAll('.time-pill').forEach((btn) => {
+        const active = btn.getAttribute('data-time') === mode;
+        btn.className = active
+          ? 'time-pill py-2.5 px-2 rounded-xl text-xs font-semibold border transition-all bg-copper/15 border-copper text-gold'
+          : 'time-pill py-2.5 px-2 rounded-xl text-xs font-medium border transition-all bg-basalt border-ivory/[0.09] text-taupe hover:text-ivory';
+      });
+      document.getElementById('custom-time-wrap').classList.toggle('hidden', mode !== 'Ко времени');
+      saveFormState();
+      updateWhatsAppPreview();
+    }
+
+    function buildWhatsAppMessage() {
+      const { sum } = getCartTotals();
+      const name = (document.getElementById('guest-name')?.value || '').trim();
+      const comment = (document.getElementById('guest-comment')?.value || '').trim();
+      const customTimeVal = document.getElementById('custom-time-input')?.value || '19:30';
+      const timeText = orderState.timeMode === 'Ко времени' ? `К ${customTimeVal}` : orderState.timeMode;
+
+      const lines = cart.map((item) => {
+        const linePrice = item.unitPrice * item.qty;
+        const priceLabel = linePrice === 0 ? 'в подарок' : formatRubNumeric(linePrice);
+        const detailPart = item.details ? `\n   (${item.details})` : '';
+        return `• ${item.name} × ${item.qty} — ${priceLabel}${detailPart}`;
+      });
+
+      const parts = [
+        'Здравствуйте! Предзаказ в «Анталья Кебаб» (Волоколамская, 11):',
+        '',
+        ...(lines.length ? lines : ['• (корзина пока пуста)']),
+        '• Комплимент от шефа: турецкий чай и тёплая лепёшка — 0 ₽',
+        '',
+        `Итого: ${formatRubNumeric(sum)}`,
+        `Формат: ${orderState.format}`,
+        `Время: ${timeText}`,
+      ];
+
+      if (name) parts.push(`Имя: ${name}`);
+      if (comment) parts.push(`Комментарий: ${comment}`);
+
+      return parts.join('\n');
+    }
+
+    function updateWhatsAppPreview() {
+      const box = document.getElementById('wa-preview-box');
+      if (box) {
+        box.textContent = buildWhatsAppMessage();
+      }
+    }
+
+    function toggleWaPreview() {
+      const box = document.getElementById('wa-preview-box');
+      const chevron = document.getElementById('wa-preview-chevron');
+      const isHidden = box.classList.toggle('hidden');
+      chevron.style.transform = isHidden ? 'rotate(0deg)' : 'rotate(180deg)';
+      updateWhatsAppPreview();
+    }
+
+    function sendOrderToWhatsApp() {
+      if (cart.length === 0) {
+        showToast('Добавьте хотя бы одно блюдо в заказ');
+        return;
+      }
+      const msg = buildWhatsAppMessage();
+      const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+      showToast('Открываем WhatsApp с готовым заказом');
+    }
+
+    function copyOrderText() {
+      if (cart.length === 0) {
+        showToast('Корзина пуста — сначала выберите блюда');
+        return;
+      }
+      copyTextFallback(buildWhatsAppMessage(), 'Текст заказа скопирован в буфер обмена');
+    }
+
+    function copyAddress() {
+      copyTextFallback(CAFE_ADDRESS, 'Адрес скопирован: ул. Волоколамская, 11');
+    }
+
+    // -----------------------------------------------------------------------
+    // 9. DRAWER & MOBILE NAV TRANSITIONS
+    // -----------------------------------------------------------------------
+    function openCartDrawer() {
+      const backdrop = document.getElementById('cart-backdrop');
+      const drawer = document.getElementById('cart-drawer');
+      backdrop.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => {
+        drawer.classList.remove('translate-x-full');
+      });
+      updateWhatsAppPreview();
+    }
+
+    function closeCartDrawer() {
+      const backdrop = document.getElementById('cart-backdrop');
+      const drawer = document.getElementById('cart-drawer');
+      drawer.classList.add('translate-x-full');
+      setTimeout(() => {
+        backdrop.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 280);
+    }
+
+    function toggleMobileMenu(forceState) {
+      const nav = document.getElementById('mobile-nav');
+      if (typeof forceState === 'boolean') {
+        nav.classList.toggle('hidden', !forceState);
+      } else {
+        nav.classList.toggle('hidden');
+      }
+    }
+
+    // -----------------------------------------------------------------------
+    // 10. CHARCOAL EMBERS CANVAS ANIMATION (RESPONSIVE & TOGGLEABLE)
+    // -----------------------------------------------------------------------
+    let embersEnabled = true;
+    let embersRafId = null;
+    const embersParticles = [];
+
+    function initEmbersCanvas() {
+      const canvas = document.getElementById('embers-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      function resizeCanvas() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+        canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        const targetCount = rect.width < 640 ? 22 : 42;
+        embersParticles.length = 0;
+        for (let i = 0; i < targetCount; i++) {
+          embersParticles.push(createEmber(rect.width, rect.height, true));
+        }
+      }
+
+      function createEmber(w, h, randomY) {
+        return {
+          x: Math.random() * w,
+          y: randomY ? Math.random() * h : h + Math.random() * 40,
+          r: 0.9 + Math.random() * 2.1,
+          vy: 0.25 + Math.random() * 0.65,
+          vx: (Math.random() - 0.5) * 0.35,
+          phase: Math.random() * Math.PI * 2,
+          alpha: 0.2 + Math.random() * 0.55,
+          hue: Math.random() > 0.35 ? '#E3A875' : '#C8824B',
+        };
+      }
+
+      function drawFrame() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        ctx.clearRect(0, 0, rect.width, rect.height);
+
+        if (embersEnabled) {
+          for (let i = 0; i < embersParticles.length; i++) {
+            const p = embersParticles[i];
+            p.y -= p.vy;
+            p.phase += 0.018;
+            p.x += p.vx + Math.sin(p.phase) * 0.22;
+
+            // Fade smoothly near top
+            const progress = 1 - Math.max(0, Math.min(1, p.y / rect.height));
+            const currentAlpha = p.alpha * (1 - progress * 0.85);
+
+            ctx.save();
+            ctx.globalAlpha = Math.max(0, currentAlpha);
+            ctx.fillStyle = p.hue;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = '#C8824B';
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+
+            if (p.y < -15 || p.x < -20 || p.x > rect.width + 20) {
+              embersParticles[i] = createEmber(rect.width, rect.height, false);
+            }
+          }
+        }
+        embersRafId = requestAnimationFrame(drawFrame);
+      }
+
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+      drawFrame();
+    }
+
+    function toggleEmbers() {
+      embersEnabled = !embersEnabled;
+      const dot = document.getElementById('embers-dot');
+      const label = document.getElementById('embers-label');
+      dot.className = embersEnabled
+        ? 'w-1.5 h-1.5 rounded-full bg-copper'
+        : 'w-1.5 h-1.5 rounded-full bg-taupe/40';
+      label.textContent = embersEnabled ? 'Искры углей: вкл' : 'Искры углей: выкл';
+    }
+
+    // -----------------------------------------------------------------------
+    // 11. SCROLL REVEAL OBSERVER & BOOTSTRAP
+    // -----------------------------------------------------------------------
+    function initScrollReveal() {
+      const elements = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        elements.forEach((el) => el.classList.add('is-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }
+      );
+
+      elements.forEach((el) => observer.observe(el));
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDishModal();
+        closeCartDrawer();
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadState();
+
+      // Restore form UI from saved state
+      document.getElementById('guest-name').value = orderState.name || '';
+      document.getElementById('guest-comment').value = orderState.comment || '';
+      document.getElementById('custom-time-input').value = orderState.customTime || '19:30';
+      setOrderFormat(orderState.format || 'С собой (самовывоз)');
+      setOrderTime(orderState.timeMode || 'Через 15–20 мин');
+
+      updateMoscowStatus();
+      setInterval(updateMoscowStatus, 30000);
+
+      renderMenu();
+      renderCart();
+      initScrollReveal();
+      initEmbersCanvas();
+    });
+  </script>
+</body>
+</html>
